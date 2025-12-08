@@ -11,7 +11,7 @@ import SwiftUI
 struct Piano_KeyboardApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PianoKeys()
         }
     }
 }
