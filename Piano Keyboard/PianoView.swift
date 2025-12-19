@@ -23,21 +23,27 @@ struct PianoKeys: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.blue.opacity(0.3).ignoresSafeArea()
+                Color.black
+                    .ignoresSafeArea()
+                
                 VStack {
                     Button {
                         userInput = []
                     } label: {
                         Text("Reset")
-                            .font(.system(size: 40))
+                            .font(.system(size: 30))
                     }
                     .offset(x: 500)
+                    .buttonStyle(.bordered)
+                    .tint(.white)
                     
                     Text("🎶 Play a song 🎶")
                         .font(.system(size: 60))
+                        .foregroundStyle(.white)
                     
                     Text("if u make a mistake, click reset")
                         .font(.system(size: 40))
+                        .foregroundStyle(.blue)
                     
                     ZStack {
                         // White keys
@@ -188,7 +194,6 @@ struct PianoKeys: View {
                     }
                 }
             }
-            
             NavigationLink("", destination: WinView(), isActive: $navigate)
                 .hidden()
         }
